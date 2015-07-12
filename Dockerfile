@@ -12,5 +12,7 @@ VOLUME /var/www/html
 
 COPY docker-entrypoint.sh /entrypoint.sh
 
+CHMOD +X /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2", "-DFOREGROUND"]
